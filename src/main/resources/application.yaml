@@ -1,0 +1,13 @@
+ktor:
+  deployment:
+    port: 8080
+    port: ${?PORT}
+  application:
+    modules:
+      - backend.ApplicationKt.module
+
+database:
+  url: "jdbc:postgresql://localhost:5432/music_catalog"
+  driver: "org.postgresql.Driver"
+  user: "postgres"
+  password: "Jored"
