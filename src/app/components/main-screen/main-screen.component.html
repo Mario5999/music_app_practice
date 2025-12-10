@@ -1,0 +1,36 @@
+<div class="main-screen">
+  <aside class="sidebar">
+    <div class="brand">Mi Reproductor</div>
+    <nav class="menu">
+      <a class="menu-item" routerLink="/">Playlist</a>
+      <a class="menu-item" routerLink="/search">Buscar</a>
+    </nav>
+    <div class="library">
+      <p class="library-title">Listas de reproduccion</p>
+      <ul>
+        <li>Mezcla diaria</li>
+        <li>Lo mejor de 2025</li>
+        <li>Favoritas</li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="content">
+    <header class="content-header">
+      <div class="greeting">
+        <h1>Explorar</h1>
+        <p class="muted">Descubre listas, álbumes y podcasts hechos para ti</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card" *ngFor="let c of cards">
+        <img class="cover" [src]="c.image" [alt]="c.title" />
+        <div class="card-info">
+          <div class="card-title">{{ c.title }}</div>
+          <div class="card-sub">{{ c.subtitle }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
